@@ -1,0 +1,163 @@
+<html>
+<head>
+    <title>CSS Positioning and Opacity Project</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f9f9f9;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 40px auto;
+            background: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+        }
+
+        h1,
+        h2 {
+            color: #2d6cdf;
+        }
+
+        .demo-area {
+            margin: 30px 0;
+            padding: 20px;
+            background: #eaf1fb;
+            border-radius: 8px;
+            position: relative;
+            min-height: 250px;
+        }
+
+        .static-box {
+            background: #b3e5fc;
+            padding: 20px;
+            border-radius: 6px;
+            margin-bottom: 10px;
+        }
+
+        .relative-box {
+            background: #ffe082;
+            padding: 20px;
+            border-radius: 6px;
+            position: relative;
+            left: 40px;
+            top: 20px;
+        }
+
+        .absolute-box {
+            background: #ffab91;
+            padding: 20px;
+            border-radius: 6px;
+            position: absolute;
+            right: 30px;
+            top: 30px;
+            width: 180px;
+        }
+
+        .fixed-box {
+            background: #c5e1a5;
+            padding: 15px;
+            border-radius: 6px;
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 100;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.12);
+        }
+
+        .opacity-demo {
+            display: flex;
+            gap: 30px;
+            margin-top: 20px;
+        }
+
+        .opacity-box {
+            width: 120px;
+            height: 120px;
+            border-radius: 8px;
+            display: flex;
+            /* align-items: center; */
+            /* justify-content: center; */
+            font-weight: bold;
+            font-size: 1.1em;
+            color: #fff;
+        }
+
+        .opacity-1 {
+            background: #2d6cdf;
+            opacity: 1;
+        }
+
+        .opacity-07 {
+            background: #2d6cdf;
+            opacity: 0.7;
+        }
+
+        .opacity-04 {
+            background: #2d6cdf;
+            opacity: 0.4;
+        }
+
+        .opacity-02 {
+            background: #2d6cdf;
+            opacity: 0.2;
+        }
+
+        @media (max-width: 600px) {
+            .opacity-demo {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .absolute-box {
+                position: static;
+                width: auto;
+                margin-top: 10px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>CSS Positioning and Opacity Project</h1>
+        <p>Welcome! In this project, you'll learn about <b>CSS positioning</b> and <b>opacity</b> with live examples and
+            explanations, just like Codingal lessons.</p>
+
+        <h2>1. CSS Positioning</h2>
+        <p>CSS positioning allows you to control where elements appear on your web page. Here are the main types:</p>
+        <ul>
+            <li><b>Static</b>: Default position, follows normal flow.</li>
+            <li><b>Relative</b>: Moves relative to its normal position.</li>
+            <li><b>Absolute</b>: Positioned relative to the nearest positioned ancestor.</li>
+            <li><b>Fixed</b>: Stays in the same place even when you scroll.</li>
+        </ul>
+        <div class="demo-area">
+            <div class="static-box">This is <b>static</b> positioning (default).</div>
+            <div class="relative-box">This is <b>relative</b> positioning (moved right and down).</div>
+            <div class="absolute-box">This is <b>absolute</b> positioning (top right corner).</div>
+        </div>
+        <div class="fixed-box">I am <b>fixed</b> at the bottom right!</div>
+
+        <h2>2. CSS Opacity</h2>
+        <p>Opacity controls how transparent an element is. <b>1</b> means fully visible, <b>0</b> means fully
+            transparent.</p>
+        <div class="opacity-demo">
+            <div class="opacity-box opacity-1">opacity: 1</div>
+            <div class="opacity-box opacity-07">opacity: 0.7</div>
+            <div class="opacity-box opacity-04">opacity: 0.4</div>
+            <div class="opacity-box opacity-02">opacity: 0.2</div>
+        </div>
+
+        <h2>Try it Yourself!</h2>
+        <p>Change the <code>left</code>, <code>top</code>, or <code>opacity</code> values in the code to see how the
+            elements move or become more/less transparent.</p>
+        <p>Happy Coding! 🚀</p>
+    </div>
+</body>
+
+</html>
